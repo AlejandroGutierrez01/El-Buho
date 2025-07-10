@@ -48,7 +48,7 @@ class _DetalleLugarPageState extends State<DetalleLugarPage> {
           .select(
               '*, perfil:turismo_perfiles!turismo_resenas_usuario_id_fkey(nombre)')
           .eq('lugar_id', widget.data['id'])
-          .is_('resena_padre', null)
+          .isFilter('resena_padre', null)
           .order('created_at', ascending: false);
 
       final respuestas = await _supabase
@@ -142,7 +142,7 @@ class _DetalleLugarPageState extends State<DetalleLugarPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
-                child: const Text('Regresar', style: TextStyle(fontSize: 16)),
+                child: const Text('Regresar', style: TextStyle(fontSize: 16, color: Colors.white)),
               ),
             ),
           ],
@@ -303,7 +303,9 @@ class _DetalleLugarPageState extends State<DetalleLugarPage> {
                 onPressed: () => _agregarResena(),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF1976D2)),
-                child: const Text('Agregar reseña'),
+                child: const Text('Agregar reseña',
+                  style: TextStyle(color: Colors.white,)
+                  )
               ),
             ),
           ],

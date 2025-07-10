@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   bool _isLogin = true;
   bool _isLoading = false;
 
-  final primaryColor = const Color(0xFF43A047);
+  final primaryColor = const Color(0xFF1976D2);
   final secondaryColor = const Color(0xFF64B5F6);
   final accentColor = const Color(0xFFFFD600);
 

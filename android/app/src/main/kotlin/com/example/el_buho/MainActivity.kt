@@ -1,4 +1,4 @@
-package com.example.el_buho
+package com.el_buho
 
 import io.flutter.embedding.android.FlutterActivity
 

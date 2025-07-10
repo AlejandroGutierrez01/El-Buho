@@ -39,9 +39,7 @@ class _TurismoPageState extends State<TurismoPage> {
     final profile = await AuthService.getUserProfile();
     final isPublisher = await AuthService.isPublisher();
     if (!mounted) return;
-    print('Debug - Usuario actual: ${AuthService.currentUser?.email}');
-    print('Debug - Perfil: $profile');
-    print('Debug - Es publicador: $isPublisher');
+
 
     setState(() {
       _userProfile = profile;
